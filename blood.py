@@ -63,5 +63,12 @@ while True:
         mycursor.execute(sql)
         mydb.commit()
         print("deleted succsesfully")
+    elif(choice==6):
+        print('Average blood donated ')
+        sql = 'SELECT AVG(`unit`) FROM `bloodbank`  '
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        print(result)
+        
     if choice==8:
         break
