@@ -26,6 +26,12 @@ while True:
 
     if choice==2:
         print("view details selected")
+        
+        sql = 'SELECT * FROM `bloodbank`'
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        for i in result:
+            print(i)
     if choice==3:
         print("Update details selected")
     if choice==4:
