@@ -45,6 +45,14 @@ while True:
     if choice==4:
         print("update details selected")
         
+        name = input('enter the name: ')
+        blood_group = input('enter the blood group to be updated: ')
+        place = input('enter the place: ')
+        phone = input('enter the phone number: ')
+        unit= input('enter the total blood donated: ')
+        sql = "UPDATE `bloodbank` SET `donor_name`='"+name+"',`blood_group`='"+blood_group+"',`unit`='"+unit+"',`donor_phone`='"+phone+"',`donor_place`='"+place+"' WHERE `donor_name`='"+name+"'"
+        mycursor.execute(sql)
+        mydb.commit()
     if choice==5:
         ("delete details selected")
     if choice==6:
