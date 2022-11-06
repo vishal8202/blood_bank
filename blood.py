@@ -69,6 +69,15 @@ while True:
         mycursor.execute(sql)
         result = mycursor.fetchall()
         print(result)
+    elif(choice == 7):
+        print('Name of the doner  starting letter')
+        st = input('Enter the first letter of the name of the donar : ')
+        sql = "SELECT `id`, `donor_name`, `blood_group`, `unit`, `donor_phone`, `donor_place` FROM `bloodbank` WHERE `donor_name` LIKE '%"+st+"%'"
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        for i in result:
+            print(i)
         
     if choice==8:
         break
+    
