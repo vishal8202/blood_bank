@@ -33,9 +33,18 @@ while True:
         for i in result:
             print(i)
     if choice==3:
-        print("Update details selected")
+        print("search details selected")
+        blood_group = input('enter the blood group to be searched: ')
+        
+        sql = "SELECT `id`, `donor_name`, `blood_group`, `unit`, `donor_phone`, `donor_place` FROM `bloodbank` WHERE `blood_group`='"+blood_group+"'"
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        for i in result:
+            print(i)
+
     if choice==4:
         print("update details selected")
+        
     if choice==5:
         ("delete details selected")
     if choice==6:
