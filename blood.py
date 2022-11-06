@@ -9,7 +9,9 @@ while True:
             3. search details
             4. update details
             5. delete details
-            6. exit
+            6. Average blood donated
+            7. Name of the doner with starting letter
+            8. exit
              """)
     choice = int(input("Enter your choice : "))
     if choice==1:
@@ -54,6 +56,12 @@ while True:
         mycursor.execute(sql)
         mydb.commit()
     if choice==5:
-        ("delete details selected")
-    if choice==6:
+        print("delete details selected")
+       
+        blood_group = input('enter the name to be delete :')
+        sql = "DELETE FROM `bloodbank` WHERE `donor_name`='"+blood_group+"'"
+        mycursor.execute(sql)
+        mydb.commit()
+        print("deleted succsesfully")
+    if choice==8:
         break
